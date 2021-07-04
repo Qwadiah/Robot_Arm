@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HTMLforM</title>
+	<meta charset="utf-8">
+
+</head>
+
+<body>
+
+<form action="insert_post.php" method="POST">
+
+
+    <p>محرك رقم1</p>
+	<p> :مقدار الزاوية
+	<input type="range" name="slider1" min="0" max="180" value="1" class="slider" id="myRange1"> </p>
+
+	<p> محرك رقم2 </p> 
+	<p>:مقدار الزاوية
+	<input type="range"  name="slider2" min="0" max="180" value="1" class="slider" id="myRange2">
+	 </p>
+
+	<p> محرك رقم3</p>
+	<p>:مقدار الزاوية
+	<input type="range" name="slider3" min="0" max="180" value="1"  class="slider" id="myRange3">
+
+	<p> محرك رقم4</p>
+	<p>:مقدار الحركة
+	<input type="range" name="slider4" min="0" max="180" value="1"  class="slider" id="myRange4"></p>
+
+	<p> محرك رقم5</p>
+	<p>:مقدار الحركة
+	<input type="range"name="slider5"  min="0" max="180" value="1"  class="slider" id="myRange5">
+	</p>
+
+	<p> محرك رقم6</p>
+	<p>:مقدار الحركة
+	<input type="range" name="slider6" min="0" max="180" value="1"  class="slider" id="myRange6"><p>
+	
+	
+
+	
+	<input type="submit" value= "ON">
+
+	<input type="submit" value= "OFF">
+		
+
+
+<script>
+         function inputOnChange(slider) {
+            let thisSlider = slider.value;
+            let label = document.querySelector(`p#${slider.id}`);
+            label.innerHTML = thisSlider;
+        }
+        function initValue() {
+            let sliders = document.querySelectorAll('.slider');
+            sliders.forEach((slider) => document.querySelector(`p#${slider.id}`).innerHTML = slider.value);
+        }
+        $("#save").click(function() {
+            
+            let sliders= document.querySelectorAll('.slider');
+            let motorState = document.getElementById("check").checked;
+            
+            $.post("save.php", {
+			"myRange1":`${sliders[0].value}`,
+                  "myRange2":`${sliders[1].value}`,
+                  "myRange3":`${sliders[2].value}`,
+                  "myRange4":`${sliders[3].value}`,
+                  "myRange5":`${sliders[4].value}`,
+                  "myRange6":`${sliders[5].value}`,
+                  "motorState":(motorState?"on":"off")
+                },
+                function(data,status) {
+                    alert(data)
+                });
+        });
+    </script>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> SliderS </title>
+<meta charset="utf-8">
+<meta name="author" content="Wadiah">
+
+<style>
+#h1{
+	float:right;
+	padding-right:40px;
+	}
+
+	#right{
+	margin-top:100px;
+	font-size:28px;
+	text-align: right;
+	padding-right:20px;
+	padding-left:20px;
+	font-family:tahoma;
+	 float: right;
+	 border:8px dashed black;
+	 padding-top:20px;
+	padding-bottom:20px;
+	width:50%;
+
+
+	}
+#slider{
+	-webkit-appearance:none;
+	width:100%;
+	height:20px;
+	background:pink;
+	outline:none;
+	opacity:0.7;
+	-webkit-transition:0.2s;
+	transition:opacity0.2s;
+	border-radius:12px;
+	box-shadow:0px 1px 10px 1px black;
+	}
+
+
+
+ul {background:linear-gradient(-20deg,white,silver,#447772);
+	font color:white;}
+
+	#left{
+	padding-top:220px;
+	padding :300px;
+
+
+	}
+	
+	
+
+ <button style="width: 100px; height: 100px;">button</button>
+
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="h1"> مرحبا بك انا روب </h1>
+
+
+<aside id="right">
+<ul >
+<div class="slidercontainer">
+	<p>محرك رقم1</p>
+	<input type="range"  min="0" max="180" value="1"  class="slider" id="myRange1">
+	  <p id=1class="Myvalue"> :مقدار الزاوية<span id="demo1" ></span></p>
+</div>
+<script>
+	var myRange1 = document.getElementById("myRange1");
+	var demo1 = document.getElementById("demo1");
+	demo1.innerHTML = myRange1.value;
+
+	myRange1.oninput = function() {
+	  demo1.innerHTML = this.value;
+	}
+</script>
+
+<div class="slidercontainer">
+	<p> محرك رقم2 </p> 
+	<input type="range" min="0" max="180" value="1" class="slider" id="myRange2">
+	<p id=2 class="Myvalue"> :مقدار الزاوية<span id="demo2" ></span></p>
+</div>
+<script>
+	var myRange2 = document.getElementById("myRange2");
+	var demo2 = document.getElementById("demo2");
+	demo2.innerHTML = myRange2.value;
+
+	myRange2.oninput = function() {
+	  demo2.innerHTML = this.value;
+	}
+</script>
+
+<div class="slider3">
+	<p> محرك رقم3</p>
+	<input type="range" min="0" max="180" value="1"  class="slider" id="myRange3"></p>
+    <p id=3 class="Myvalue"> :مقدار الزاوية<span id="demo3" ></span></p>
+</div>
+<script>
+	var myRange3 = document.getElementById("myRange3");
+	var demo3 = document.getElementById("demo3");
+	demo3.innerHTML = myRange3.value;
+
+	myRange3.oninput = function() {
+	  demo3.innerHTML = this.value;
+	}
+</script>
+
+<div class="slider4">
+	<p> محرك رقم4</p>
+	<input type="range" min="0" max="180" value="1"  class="slider" id="myRange4"></p>
+	  <p id=4 class="Myvalue"> :مقدار الزاوية<span id="demo4" ></span></p>
+</div>
+<script>
+	var myRange4 = document.getElementById("myRange4");
+	var demo4 = document.getElementById("demo4");
+	demo4.innerHTML = myRange4.value;
+
+	myRange4.oninput = function() {
+	  demo4.innerHTML = this.value;
+	}
+</script>
+
+<div class="slider5">
+	<p> محرك رقم5</p>
+	<input type="range" min="0" max="180" value="1"  class="slider" id="myRange5">
+	<p id=5 class="Myvalue"> :مقدار الزاوية<span id="demo5" ></span></p>
+</div>
+<script>
+	var myRange5 = document.getElementById("myRange5");
+	var demo5 = document.getElementById("demo5");
+	demo5.innerHTML = myRange5.value;
+
+	myRange5.oninput = function() {
+	  demo5.innerHTML = this.value;
+	}
+</script>
+	<div class="slider6">
+	<p> محرك رقم6</p>
+	<input type="range" min="0" max="180" value="1" class="slider" id="myRange6">
+	<p id=6 class="Myvalue"> :مقدار الزاوية<span id="demo6" ></span></p>
+</div>
+<script>
+	var myRange6 = document.getElementById("myRange6");
+	var demo6 = document.getElementById("demo6");
+	demo6.innerHTML = myRange6.value;
+
+	myRange6.oninput = function() {
+	  demo6.innerHTML = this.value;
+	}
+</script>
+
+</ul>
+
+</aside id="right">
+
+<aside id="left">
+
+<button style="border-radius: 10px;width: 100px; height: 100px;font-size:28px;
+background:linear-gradient(-20deg,white,silver,#447772);margin-right:40px;">حفظ</button>
+
+
+<button style="border-radius: 10px;width: 100px; height: 100px;font-size:28px;
+background:linear-gradient(-20deg,white,silver,#447772);">تشغيل</button>
+
+
+<script>
+        var parentDOM = document.getElementById('parent-id');
+        var test1 = parentDOM.getElementById('test1');
+        
+    </script>
+	
+</aside id="left">
+
+
+
+</body>
+
+</html>

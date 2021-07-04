@@ -1,0 +1,15 @@
+المهمة الأولى 
+الفكره تتضمن كتابة كود لأنشاء ذراع رجل الى اعتقد مصارع آلي
+
+انشاء الواجهة باستخدام ال html تحت اسم "hand"
+تكشف فيه 6 محركات درجة كل منها تتراوح بين الـواحد الى 180 درجة 
+كما يحتوي على زري حفظ وتشغيل
+
+index.html Contain the input for the page 
+index.php Contain the connaction code for mysql
+insert.php Contain the connaction+ the insert code for sql
+form.php have the printed output 
+
+for the img: Capture1(db_structure secrenshot)
+Capture2(db_ brows secreanshot)
+CaptureGUI( interface for the enger)
